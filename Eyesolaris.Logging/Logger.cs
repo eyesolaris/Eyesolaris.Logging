@@ -104,7 +104,7 @@ namespace Eyesolaris.Logging
                     LogImpl(logLevel, eventId, state, exception, formatter);
                     if (AutoFlush)
                     {
-                        Flush();
+                        FlushImpl();
                     }
                 }
             }
@@ -129,7 +129,7 @@ namespace Eyesolaris.Logging
                     LogImpl(logLevel, message, eventId, isException);
                     if (AutoFlush)
                     {
-                        Flush();
+                        FlushImpl();
                     }
                 }
             }
@@ -153,7 +153,7 @@ namespace Eyesolaris.Logging
                 WriteImpl(text);
                 if (AutoFlush)
                 {
-                    Flush();
+                    FlushImpl();
                 }
             }
             finally
@@ -172,7 +172,7 @@ namespace Eyesolaris.Logging
                 WriteLineImpl(text);
                 if (AutoFlush)
                 {
-                    Flush();
+                    FlushImpl();
                 }
             }
             finally
